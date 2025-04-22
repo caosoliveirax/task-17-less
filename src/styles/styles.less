@@ -1,12 +1,15 @@
+@import 'vars.less';
+@import 'maps.less';
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    font-family: @main-font;
 }
 
 body {
-    background-color: #f5f6fa;
+    background-color: @backgrounds[main];
 }
 
 li {
@@ -20,7 +23,7 @@ li {
 }
 
 header {
-    background-color: #182C61;
+    background-color: @backgrounds[header];
     position: sticky;
     top: 0;
     left: 0;
@@ -43,7 +46,7 @@ header .container {
 }
 
 .menu li a {
-    color: #fff;
+    color: @color-descriptions-links;
     text-decoration: none;
 }
 
@@ -60,15 +63,23 @@ section {
     width: 100%;
 }
 
-.product-item img {
+.products-item img {
     width: 100%;
     border-radius: 16px;
 }
 
+.title {
+    color: @color-titles;
+}
+
+.products-item p {
+    color: @color-descriptions-links;
+}
+
 .product-button {
     display: block;
-    background-color: #44bd32;
-    color: #fff;
+    background-color: @backgrounds[button];
+    color: @color-descriptions-links;
     text-align: center;
     padding: 8px 0;
     border-radius: 8px;
@@ -77,7 +88,7 @@ section {
 }
 
 .product-button:hover {
-    background-color: #4cd137;
+    background-color: @color-button-hover;
 }
 
 @media screen and (max-width: 1023px) {
