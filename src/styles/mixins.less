@@ -1,0 +1,39 @@
+// Para layouts
+.containersDefault(@max-w) {
+    max-width: @max-w;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flexLayout(@justify: space-between, @align: center) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.gridLayout(@cols: 3, @colsW: 32.66%, @colGap: 1%, @rowGap: 4%) {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(@cols, @colsW);
+    column-gap: @colGap;
+    row-gap: @rowGap;
+}
+
+//Estilos
+
+.linkStyles(@color) {
+    color: @color;
+    text-decoration: none;
+}
+
+.buttonStyles() {
+    display: block;
+    background-color: #backgrounds[button];
+    color: @color-descriptions-links;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-top: 8px;
+    text-decoration: none;
+}
+
